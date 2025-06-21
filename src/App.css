@@ -1,0 +1,231 @@
+/*
+============================================
+--- CÓDIGO CSS COMPLETO Y DEFINITIVO ---
+============================================
+*/
+
+/* --- Fuentes y Configuración Base --- */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.App {
+  min-height: 100vh;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.5s ease;
+  position: relative;
+}
+
+/* Capa de oscurecimiento para mejorar legibilidad */
+.App::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  transition: background-color 0.5s ease;
+}
+
+/* --- Contenedor de Contenido Principal --- */
+.game-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  color: white;
+  width: 100%;
+  max-width: 420px;
+  height: 90vh;
+  max-height: 800px;
+  padding: 30px 25px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+
+/* --- Estilos Generales de Elementos --- */
+.logo {
+  width: 160px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.main-text-box, .riddle-box {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 20px 25px;
+  border-radius: 20px;
+  font-size: clamp(1.1rem, 4vw, 1.3rem);
+  line-height: 1.5;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: clamp(2.2rem, 10vw, 3.2rem);
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+  margin: 15px 0;
+  line-height: 1.1;
+}
+
+p.intro-text {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+button {
+  font-family: 'Luckiest Guy', cursive;
+  background-color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+button:hover { transform: scale(1.05); }
+
+/*
+============================================
+--- TEMAS DE COLOR POR PANTALLA ---
+============================================
+*/
+
+.screen-start-purple {
+  background: linear-gradient(160deg, #a450e5 0%, #4a216c 100%);
+  background-image:
+    linear-gradient(160deg, #a450e5 0%, #4a216c 100%),
+    radial-gradient(circle, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: cover, 3px 3px;
+}
+.screen-start-purple button { color: #4a216c; }
+
+.screen-riddle-orange {
+  background: linear-gradient(160deg, #ff8c00 0%, #ff5722 100%);
+  background-image:
+    linear-gradient(160deg, #ff8c00 0%, #ff5722 100%),
+    radial-gradient(circle, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: cover, 3px 3px;
+}
+.screen-riddle-orange button { color: #b8401a; }
+
+.screen-treasure {
+  background: linear-gradient(160deg, #ffc300 0%, #d89e00 100%);
+}
+.screen-treasure button { color: #8c5e00; }
+.screen-treasure .win-title {
+    font-size: 3rem;
+    color: #FFFFFF;
+    text-shadow: 4px 4px 0px #8c5e00;
+}
+.screen-treasure .win-details {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/*
+=====================================================
+--- ESTILOS PROFESIONALES PARA LA PANTALLA DEL ESCÁNER ---
+=====================================================
+*/
+
+/* Cuando el escáner está activo, oscurecemos más el fondo */
+.scanning-active.App::before {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+}
+
+/* Contenedor del contenido del escáner */
+.scanner-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.scanner-wrapper h1 {
+  font-size: 2.8rem;
+  color: white;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+.scanner-wrapper p {
+  font-size: 1.1rem;
+  margin-top: -15px;
+  margin-bottom: 10px;
+}
+
+/* El visor de la cámara */
+#qr-scanner-container {
+  width: 100%;
+  max-width: 400px;
+  border: 4px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  background: rgba(0,0,0,0.2);
+}
+
+/* --- ESTILOS PARA EL BOTÓN DE PERMISOS --- */
+#html5-qrcode-button-camera-permission {
+  font-size: 0 !important; /* Oculta el texto original */
+  position: relative;
+  
+  display: block !important;
+  width: 85% !important; /* Un ancho generoso */
+  max-width: 320px !important;
+  margin: 20px auto 10px auto !important; /* Centra el botón horizontalmente */
+  
+  background-color: white !important;
+  border: none !important;
+  padding: 18px !important;
+  border-radius: 50px !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+#html5-qrcode-button-camera-permission::after {
+  content: 'SOLICITAR PERMISO'; /* Texto más corto para asegurar que quepa */
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: #333;
+}
+
+/* --- ESTILOS PARA EL ENLACE DE GALERÍA --- */
+#html5-qrcode-anchor-scan-type-change {
+  font-size: 0 !important;
+  display: block;
+  text-align: center;
+  margin-top: 5px;
+}
+#html5-qrcode-anchor-scan-type-change::after {
+  content: 'Escanear una imagen de la galería';
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: underline;
+}
+
+/* --- ESTILOS PARA EL MENSAJE DE ERROR --- */
+.scan-error {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0 10px 15px 10px;
+  font-weight: bold;
+}
