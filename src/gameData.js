@@ -27,7 +27,7 @@ export const finalMissions = {
   "GLORIETA_1": {
     content: {
       introText: "Misión del Equipo ",
-      riddle: "Soy el oído que escucha al vecino,y la voz que decide su destino.Si tienes una idea o una queja que dar,este es el primer lugar al que debes llegar.",
+      riddle: "Soy el oído que escucha al vecino,y la voz que decide su destino.Si tienes una idea o una queja que dar,este es el primer lugar al que debes llegar, puedes encontrar al alcalde",
       logo: "/images/pirate-logo.png",
     },
     expectedQr: "QR_HACIA_COMPLEJO",
@@ -54,7 +54,7 @@ export const finalMissions = {
   "GLORIETA_4": {
     content: {
       introText: "Misión del Equipo ",
-      riddle: "Acertijo para el grupo 4.",
+      riddle: "Entre libros callados empezó el camino,con letras, saber y un viejo destino.Si quieres avanzar, sin mucho ruido, regresa al saber… donde todo ha partido",
       logo: "/images/pirate-logo.png",
     },
     expectedQr: "QR_HACIA_COMPLEJO",
@@ -63,7 +63,7 @@ export const finalMissions = {
   "GLORIETA_5": {
     content: {
       introText: "Misión del Equipo ",
-      riddle: "Acertijo para el grupo 5.",
+      riddle: "Pequeños colores, juegos y canción,allí comienza toda educación.Lleva un nombre santo, puro y de luz,y cuida con amor al Divino Jesús.",
       logo: "/images/pirate-logo.png",
     },
     expectedQr: "QR_HACIA_COMPLEJO",
@@ -72,7 +72,7 @@ export const finalMissions = {
   "GLORIETA_6": {
     content: {
       introText: "Misión del Equipo ",
-      riddle: "Acertijo para el grupo 6.",
+      riddle: "Su nombre evoca pureza y alas en vuelo,una reina del cielo que cuida con celo.Entre risas, colores y voces en flor,allí hallarás la pista con todo tu fervor.",
       logo: "/images/pirate-logo.png",
     },
     expectedQr: "QR_HACIA_COMPLEJO",
@@ -81,7 +81,7 @@ export const finalMissions = {
   "GLORIETA_7": {
     content: {
       introText: "Misión del Equipo",
-      riddle: "Acertijo para el grupo 7.",
+      riddle: "Héroe del mar y de firme memoria,su nombre decora esta escuela de historia.No mires adentro, busca por fuera,la pista te espera donde empieza la escuela.",
       logo: "/images/pirate-logo.png",
     },
     expectedQr: "QR_HACIA_COMPLEJO",
@@ -90,7 +90,7 @@ export const finalMissions = {
   "GLORIETA_8": {
     content: {
       introText: "Misión del Equipo",
-      riddle: "Acertijo para el grupo 8.",
+      riddle: "Entre jóvenes firmes, con sueños de altura,se forjan futuros con mente segura.Lleva el nombre de un hombre que dejó huella,y en su gran fachada, se esconde la estrella.",
       logo: "/images/pirate-logo.png",
     },
     expectedQr: "QR_HACIA_COMPLEJO",
@@ -99,7 +99,7 @@ export const finalMissions = {
   "GLORIETA_9": {
     content: {
       introText: "Misión del Equipo",
-      riddle: "Acertijo para el grupo 9.",
+      riddle: "Con fe y enseñanza avanza su misión,formando en valores y educación.Un santo lo guía, bautista de andar,y en muros privados, la pista has de hallar.",
       logo: "/images/pirate-logo.png",
     },
     expectedQr: "QR_HACIA_COMPLEJO",
@@ -108,7 +108,7 @@ export const finalMissions = {
   "GLORIETA_10": {
     content: {
       introText: "Misión del Equipo",
-      riddle: "Acertijo para el grupo 10.",
+      riddle: "Aquí el municipio no arregla pistas ni parques,sino que prepara a los jóvenes para que embarquenhacia la vida universitaria, sin que nada les falte.¡Busca el lugar donde el futuro del distrito late!",
       logo: "/images/pirate-logo.png",
     },
     expectedQr: "QR_HACIA_COMPLEJO",
